@@ -6,7 +6,7 @@ body {
 	width:350px;
 	display: block;
 	margin: auto;
-	padding-top: 35px;
+	padding-top: 25px;
 }
 .bottomIMG {
 	width: 250px;
@@ -15,4 +15,15 @@ body {
 .center{
 	text-align: center;
 	padding-bottom: 20px;
+}
+
+ul.nav {
+	display: inline-block;
+	padding-top: 20px;
+}
+
+.Shop {
+	width: 275px;
+	margin: 65%;
+	padding-top: 10px;
 }
