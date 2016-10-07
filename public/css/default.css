@@ -1,0 +1,12 @@
+body {
+	/*background-image: url("../img/mainLogo.png");
+	background-repeat: no-repeat;
+	width: 200px;*/
+}
+
+#logo{
+	width:300px;
+	display: block;
+	margin: auto;
+	padding-top: 220px;
+}
