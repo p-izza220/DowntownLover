@@ -1,5 +1,6 @@
-body {
-  background-image: url("../img/bg.png")
+body{
+  background-image: url("../img/bg.png");
+  font-family:"Courier New", Courier, Monaco;
 }
 .lorem {
   font-size: 4vw;
@@ -8,17 +9,21 @@ body {
   margin-right: 25%;
 }
 #logo{
-	width:350px;
+	width:320px;
 	display: block;
 	margin: auto;
-	padding-top: 25px;
-  padding-bottom: 25px;
-  border-radius: 500px;
+	padding-top: 5px;
+  padding-bottom: 5px;
 }
 .bottomIMG {
-	width: 250px;
-	border: 2px solid black;
+  width: 250px;
 }
+
+#footerTag{
+  text-align: center;
+  font-size: 12px;
+}
+
 .center{
 	text-align: center;
 	padding-bottom: 20px;
@@ -29,12 +34,13 @@ ul.nav {
 }
 .shop {
 	width: 275px;
-	margin: 65%;
-	padding-top: 10px;
+  height: 310px;
+	padding-top: 25px;
+  padding-bottom: 10px;
 }
 
 .nav-pills > li.active > a {
-	background-color: pink;
+	background-color: #FFBDD7;
 }
 /* Thumbnail Animations */
 figure{

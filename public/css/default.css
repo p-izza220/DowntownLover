@@ -1,38 +1,55 @@
+body{
+   font-family:"Courier New", Courier, Monaco;
+}
+
 .lorem {
   font-size: 4vw;
   border: 1px solid black;
   margin-left: 25%;
   margin-right: 25%;
 }
+
 #logo{
-	width:350px;
+	width:320px;
 	display: block;
 	margin: auto;
-	padding-top: 25px;
-  padding-bottom: 25px;
-  border-radius: 500px;
+	padding-top: 5px;
+  padding-bottom: 5px;
 }
+
 .bottomIMG {
 	width: 250px;
-	border: 2px solid black;
 }
+
 .center{
 	text-align: center;
-	padding-bottom: 20px;
+	padding-bottom: 25px;
 }
+
+#footerTag{
+  text-align: center;
+  font-size: 12px;
+}
+
 ul.nav {
 	display: inline-block;
-	padding-top: 20px;
+	padding-top: 17px;
 }
 .shop {
 	width: 275px;
-	margin: 65%;
-	padding-top: 10px;
+  height: 310px;
+	padding-top: 0px;
 }
 
-.nav-pills > li.active > a {
-	background-color: pink;
+.nav-pills > li > a:hover {
+  background-color: #CD73B2;
 }
+
+
+.nav-pills > li.active > a{
+  background-color: #CB7BDC; 
+}
+
 /* Thumbnail Animations */
 figure{
   width: 400px;
@@ -41,8 +58,6 @@ figure{
   position: relative;
   display: inline-block;
   vertical-align: top;
-  border: 5px solid #fff;
-  box-shadow: 0 0 5px #ddd;
   margin: 1em;
 }
 
