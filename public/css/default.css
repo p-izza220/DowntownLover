@@ -10,16 +10,15 @@ body{
 }
 
 #logo{
-	width:350px;
+	width:320px;
 	display: block;
 	margin: auto;
-	padding-top: 10px;
-  padding-bottom: 0;
+	padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .bottomIMG {
 	width: 250px;
-  padding-bottom: 5px;
 }
 
 .center{
@@ -38,16 +37,17 @@ ul.nav {
 }
 .shop {
 	width: 275px;
+  height: 310px;
 	padding-top: 0px;
 }
 
 .nav-pills > li > a:hover {
-  background-color: #FFBDD7;
+  background-color: #CD73B2;
 }
 
 
 .nav-pills > li.active > a{
-  background-color: #CD73B2; 
+  background-color: #CB7BDC; 
 }
 
 /* Thumbnail Animations */

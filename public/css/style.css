@@ -9,15 +9,14 @@ body{
   margin-right: 25%;
 }
 #logo{
-	width:350px;
+	width:320px;
 	display: block;
 	margin: auto;
-	padding-top: 25px;
-  padding-bottom: 25px;
-  border-radius: 500px;
+	padding-top: 5px;
+  padding-bottom: 5px;
 }
 .bottomIMG {
-	width: 250px;
+  width: 250px;
 }
 
 #footerTag{
@@ -35,6 +34,7 @@ ul.nav {
 }
 .shop {
 	width: 275px;
+  height: 310px;
 	padding-top: 25px;
   padding-bottom: 10px;
 }
