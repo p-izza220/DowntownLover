@@ -30,10 +30,16 @@ post '/contact' do
     "Thanks for contacting Downtown Lover",
     SendGrid::Email.new(email: params[:email] ),
     SendGrid::Content.new(type: 'text/plain', value: <<-EMAILCONTENTS
+      Greetings #{params[:name]},
+
       Thanks for letting us know how you feel.
 
-      Our team will be in contact with you shortly.  For your records here's a copy of the feedback we recieved:
----------------------------------
+      Our team will be in contact with you shortly.  
+
+      For your records here's a copy of the feedback we recieved:
+      
+      ---------------------------------
+      
       #{params[:message]}
 EMAILCONTENTS
       )
