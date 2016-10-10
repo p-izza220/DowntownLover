@@ -2,11 +2,12 @@ body{
   background-image: url("../img/bg.png");
   font-family:"Courier New", Courier, Monaco;
 }
-.lorem {
+.about {
   font-size: 4vw;
   border: 1px solid black;
   margin-left: 25%;
   margin-right: 25%;
+  padding: 5px;
 }
 #logo{
 	width:320px;
@@ -21,7 +22,7 @@ body{
 
 #footerTag{
   text-align: center;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .center{
@@ -141,13 +142,13 @@ figure:hover img{
 }
 
 @media (min-width: 768px) {
-  .lorem {
+  .about {
     font-size: 3.5vw;
   }
 }
 
 @media (min-width: 992px) {
-  .lorem {
+  .about {
     font-size: 2.5vw;
   }
 }
