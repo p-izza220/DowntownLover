@@ -21,6 +21,10 @@ ul.nav {
 	margin: 65%;
 	padding-top: 10px;
 }
+
+.nav-pills > li.active > a {
+	background-color: pink;
+}
 /* Thumbnail Animations */
 figure{
   width: 400px;
