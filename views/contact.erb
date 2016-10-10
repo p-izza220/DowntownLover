@@ -10,4 +10,20 @@
 			</div>
 		</div>
 	</div>
-  <h1>Contact | DTL</h1>
+	<div class="col-md-12 text-center">
+	  <form method="POST" action="/contact">
+	    <label for="name">Name: </label>
+	    <input type="text" name="name" placeholder="Michael" />
+	    <br/>
+	    <br/>
+	    <label for="email">E-mail: </label>
+	    <input type="email" name="email" placeholder="mike123@mail.com" />
+	    <br/>
+	    <br/>
+	  	<textarea cols="30" rows="10" name="message"></textarea>
+	  	<br/>
+	  	<br/>
+	  <input type="submit" />
+	  </form>
+	  <span id="console"><%= @msg %></span>
+	</div>
