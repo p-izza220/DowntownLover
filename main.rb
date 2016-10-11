@@ -16,7 +16,7 @@ get '/about' do
 end
 
 get '/contact' do
-  @script = "js/main.js"
+  @script = "js/contact.js"
 	@style = "css/style.css"
 	@title = "Contact - DTL"
 	erb :contact
