@@ -10,7 +10,7 @@ body{
   padding: 5px;
 }
 
-#logo{
+#logo {
 	width:320px;
 	display: block;
 	margin: auto;
@@ -22,15 +22,15 @@ body{
 	width: 250px;
 }
 
-.center{
+.center {
 	text-align: center;
 	padding-bottom: 25px;
 }
 
-#footerTag{
-  text-align: center;
+#footerTag {
+  width: 100%;
   font-size: 15px;
-  padding-top: 10px;
+  bottom: 0;
 }
 
 ul.nav {
@@ -43,13 +43,12 @@ ul.nav {
 	padding-top: 0px;
 }
 
-.nav-pills > li > a:hover {
-  background-color: #CD73B2;
+.nav-pills > li.active > a {
+  background-color: #FFBDD7;
 }
 
-
-.nav-pills > li.active > a{
-  background-color: #CB7BDC; 
+.nav-pills > li.active > a:hover {
+  background-color: #FF9D97
 }
 
 /* Thumbnail Animations */
