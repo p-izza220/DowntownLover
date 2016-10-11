@@ -3,6 +3,7 @@ var currentSong = 0; //increase currentSong by 0
 var elMessage, elMessageCharCount, elConsole;
 
 $(document).ready(function(){
+  startTime();
   elMessage = document.querySelector("textarea[name=message]");
   elMessageCharCount = document.getElementById("message-remaining");
   elConsole = document.getElementById("console");
@@ -13,9 +14,7 @@ $(document).ready(function(){
     // if there's still room to write, update the remaining character count and let them go through
 
     // console.log( elMessage, elMessageCharCount );
-    if( !updateRemaining( elMessage, elMessageCharCount ) ) {
-      console.innerText = "Sorry, too many letters";
-    }
+    updateRemaining( elMessage, elMessageCharCount );
     // else, if there's no room, block the letters
   });
 
@@ -28,8 +27,6 @@ $(document).ready(function(){
     $("#songs").html("");
     // Search for the submitted term
     scSearch( $("#search").val() );
-
-    console.log($("#search").val() );
     // $(...).val() gets us
     // element.value
   });
@@ -57,10 +54,39 @@ SC.stream( '/tracks/' + tracks[currentSong].id ).then(function(player){
 };
 // Takes a number of characters and updates element
 function updateRemaining( elInput, elMsg ) {
-  var remaining = elMsg.innerText = elInput.getAttribute('maxlength') - elInput.value.length;
-  if( remaining > 0) {
+  var remaining = elInput.getAttribute('maxlength') - elInput.value.length;
+  if( remaining >= 0 ) {
     elMsg.innerText = remaining;
     return true;
-  }
+  } 
   return false;
 }
+
+function startTime() {
+  var today=new Date();
+  var h=today.getHours();
+  var m=today.getMinutes();
+  var s=today.getSeconds();
+  // add a zero in front of numbers<10
+  m=checkTime(m);
+  s=checkTime(s);
+  var hd=h;
+  document.getElementById('txt').innerHTML=(hd=0?"12":hd>12?hd-12:hd)+":"+m+":"+s+" "+(h<12?"AM":"PM");
+  t=setTimeout(function(){startTime()},500);
+  }
+
+  function checkTime(i)
+  {
+  if (i<10)
+    {
+    i="0" + i;
+    }
+  return i;
+  }
+
+  function checkTime(i) {
+      if (i < 10) {
+          i = "0" + i;
+      }
+      return i;
+  }

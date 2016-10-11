@@ -2,6 +2,8 @@ var tracks;
 var currentSong = 0; //increase currentSong by 0
 
 $(document).ready(function(){
+  startTime();
+  
   SC.initialize({
    client_id: 'f77a15a6adfbb5035c8a8cf38e399f1e'
   }); // client_id
@@ -44,3 +46,32 @@ function updateRemaining( elInput, elMsg ) {
   }
   return false;
 }
+
+function startTime() {
+  var today=new Date();
+  var h=today.getHours();
+  var m=today.getMinutes();
+  var s=today.getSeconds();
+  // add a zero in front of numbers<10
+  m=checkTime(m);
+  s=checkTime(s);
+  var hd=h;
+  document.getElementById('txt').innerHTML=(hd=0?"12":hd>12?hd-12:hd)+":"+m+":"+s+" "+(h<12?"AM":"PM");
+  t=setTimeout(function(){startTime()},500);
+  }
+
+  function checkTime(i)
+  {
+  if (i<10)
+    {
+    i="0" + i;
+    }
+  return i;
+  }
+
+  function checkTime(i) {
+      if (i < 10) {
+          i = "0" + i;
+      }
+      return i;
+  }
