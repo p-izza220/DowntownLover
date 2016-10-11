@@ -1,7 +1,24 @@
 var tracks;
 var currentSong = 0; //increase currentSong by 0
+var elMessage, elMessageCharCount, elConsole;
 
 $(document).ready(function(){
+  elMessage = document.querySelector("textarea[name=message]");
+  elMessageCharCount = document.getElementById("message-remaining");
+  elConsole = document.getElementById("console");
+  // Character Count update
+  updateRemaining(elMessage,elMessageCharCount);
+
+  elMessage.addEventListener("keydown",function(event){
+    // if there's still room to write, update the remaining character count and let them go through
+
+    // console.log( elMessage, elMessageCharCount );
+    if( !updateRemaining( elMessage, elMessageCharCount ) ) {
+      console.innerText = "Sorry, too many letters";
+    }
+    // else, if there's no room, block the letters
+  });
+
   SC.initialize({
    client_id: 'f77a15a6adfbb5035c8a8cf38e399f1e'
   }); // client_id
@@ -11,6 +28,8 @@ $(document).ready(function(){
     $("#songs").html("");
     // Search for the submitted term
     scSearch( $("#search").val() );
+
+    console.log($("#search").val() );
     // $(...).val() gets us
     // element.value
   });
@@ -23,9 +42,10 @@ function scSearch(term) {
   playNext();
 });
 };
-// Plays the next song
 function playNext() {
-SC.stream( '/tracks/' + tracks[currentSong].id ).then(function(player){      
+SC.stream( '/tracks/' + tracks[currentSong].id ).then(function(player){    
+    console.log(player); 
+    console.log(tracks);   
     player.play();
     $("#artwork").attr("src", tracks[currentSong].artwork_url);
     $("#title").html("Now playing: " + tracks[currentSong].title);

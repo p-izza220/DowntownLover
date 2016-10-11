@@ -1,7 +1,23 @@
-body{
+/* Main Area */
+body {
   background-image: url("../img/bg.png");
   font-family:"Courier New", Courier, Monaco;
 }
+/* ID */
+#footerTag {
+  width: 100%;
+  font-size: 15px;
+  bottom: 0;
+}
+
+#logo {
+  width:320px;
+  display: block;
+  margin: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+/* Class */
 .about {
   font-size: 4vw;
   border: 1px solid black;
@@ -10,22 +26,8 @@ body{
   padding: 5px;
 }
 
-#logo {
-	width:320px;
-	display: block;
-	margin: auto;
-	padding-top: 5px;
-  padding-bottom: 5px;
-}
-
 .bottomIMG {
   width: 250px;
-}
-
-#footerTag {
-  width: 100%;
-  font-size: 15px;
-  bottom: 0;
 }
 
 .center {
@@ -53,7 +55,7 @@ ul.nav {
 }
 
 /* Thumbnail Animations */
-figure{
+figure {
   width: 400px;
   height: 300px;
   overflow: hidden;
@@ -65,7 +67,7 @@ figure{
   margin: 1em;
 }
 
-figcaption{
+figcaption {
   position: absolute;
   left: 0; right: 0;
   top: 0; bottom: 0;
@@ -76,7 +78,7 @@ figcaption{
   display: table;
 }
 
-figcaption div{
+figcaption div {
   display: table-cell;
   vertical-align: middle;
   position: relative;
@@ -86,7 +88,7 @@ figcaption div{
   text-transform: uppercase;
 }
 
-figcaption div:after{
+figcaption div:after {
   position: absolute;
   content: "";
   left: 0; right: 0;
@@ -98,18 +100,18 @@ figcaption div:after{
   background: #2c3e50;
 }
 
-figure img{
+figure img {
   -webkit-transition: all 0.5s linear;
           transition: all 0.5s linear;
   -webkit-transform: scale3d(1, 1, 1);
           transform: scale3d(1, 1, 1);
 }
 
-figure:hover figcaption{
+figure:hover figcaption {
  background: rgba(255,255,255,0.3);
 }
 
-figcaption:hover div{
+figcaption:hover div {
   opacity: 1;
   top: 0;
 }
@@ -118,7 +120,7 @@ figcaption:hover div:after{
   width: 50%;
 }
 
-figure:hover img{
+figure:hover img {
   -webkit-transform: scale3d(1.2, 1.2, 1);
           transform: scale3d(1.2, 1.2, 1);
 }
