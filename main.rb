@@ -25,6 +25,13 @@ get '/gallery' do
 end
 
 post '/contact' do
+  @title = "Contact XYZ"
+  @msg = "Thanks for your submission"
+
+  if /^[^@]+@[^\.]{2,}\.[^\.]{2,}$/ =~ params[:email]
+
+  erb :contact
+
   mail = SendGrid::Mail.new( 
     SendGrid::Email.new(email: "dev4mc@gmail.com"),
     "Thanks for contacting Downtown Lover",
@@ -48,11 +55,18 @@ EMAILCONTENTS
 
   response = sg.client.mail._('send').post(request_body: mail.to_json)
 
+  @msg = "Thanks for your submission"
   puts response.status_code
   puts response.body
   puts response.headers
+else
+  @msg = "Something is wrong with your email, friend"
+end
+  # end email check
 
-  @title = "Contact XYZ"
-  @msg = "Thanks for your submission"
   erb :contact
+end
+
+def getRouteIndex route
+  $menu.index{ |c| c[:href] == route }
 end
