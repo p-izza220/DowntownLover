@@ -3,6 +3,35 @@ var currentSong = 0; //increase currentSong by 0
 var elMessage, elMessageCharCount, elConsole;
 
 $(document).ready(function(){
+  function startTime() {
+      var today = new Date();
+      var h = today.getHours();
+      var m = today.getMinutes();
+      var s = today.getSeconds();
+      // add a zero in front of numbers<10
+      m = checkTime(m);
+      s = checkTime(s);
+
+      var suffix;        
+      if (h >= 12 && h < 24){
+          suffix = "pm";
+      } else {
+          suffix = "am";
+      }    
+      document.getElementById('txt').innerHTML = h + ":" + m + ":" + s + " " + suffix;
+
+      t = setTimeout(function () {
+          startTime()
+      }, 500);
+  }
+
+  function checkTime(i) {
+      if (i < 10) {
+          i = "0" + i;
+      }
+      return i;
+  }
+  
   elMessage = document.querySelector("textarea[name=message]");
   elMessageCharCount = document.getElementById("message-remaining");
   elConsole = document.getElementById("console");

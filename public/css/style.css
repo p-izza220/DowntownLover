@@ -17,7 +17,15 @@ body {
   padding-top: 5px;
   padding-bottom: 5px;
 }
+
+#console.error {
+  color: red;
+}
 /* Class */
+input.error {
+  border: 1px solid red;
+}
+
 .about {
   font-size: 4vw;
   border: 1px solid black;
