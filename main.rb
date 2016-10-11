@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'sendgrid-ruby'
 
 get '/' do
 	@style = "css/default.css"
@@ -25,12 +26,11 @@ get '/gallery' do
 end
 
 post '/contact' do
-  @title = "Contact XYZ"
+  @style = "css/style.css"
+  @title = "Contact - DTL"
   @msg = "Thanks for your submission"
 
-  if /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ =~ params[:email]
-
-  erb :contact
+  if /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ =~ params[:email]
 
   mail = SendGrid::Mail.new( 
     SendGrid::Email.new(email: "dev4mc@gmail.com"),

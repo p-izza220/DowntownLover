@@ -1,29 +1,40 @@
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12 text-center">
-				<ul class="nav nav-pills">
-				  <li role="presentation"><a href="/">Home</a></li>
-				  <li role="presentation"><a href="/gallery">Shop</a></li>
-				  <li role="presentation"><a href="/about">About</a></li>
-				  <li role="presentation" class="active"><a href="/contact">Contact</a></li>
-			  </ul>
-			</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 text-center">
+			<ul class="nav nav-pills">
+			  <li role="presentation"><a href="/">Home</a></li>
+			  <li role="presentation"><a href="/gallery">Shop</a></li>
+			  <li role="presentation"><a href="/about">About</a></li>
+			  <li role="presentation" class="active"><a href="/contact">Contact</a></li>
+		  </ul>
 		</div>
+		<div class="col-md-12 text-center">
+	  <br/>
+		<form id="search_form">
+		  <img src="img/sc.png">
+			<input id="search" placeholder="Type here to play..." />
+			<input id="smit" type="submit" value="Play" />
+		</form>
+		<h6 id="title"><!-- Soundcloud song --></h6>
 	</div>
-	<div class="col-md-12 text-center">
-	  <form method="POST" action="/contact">
-	    <label for="name">Name: </label>
-	    <input type="text" name="name" placeholder="Mike" />
-	    <br>
-	    <br>
-	    <label for="email">E-mail: </label>
-	    <input type="email" name="email" placeholder="mike@email.com" />
-	    <br>
-	    <br>
-	  	<textarea cols="30" rows="10" name="message"></textarea>
-	  	<br>
-	  	<br>
-	  <input type="submit" />
-	  </form>
-	  <span id="console"><%= @msg %></span>
 	</div>
+</div>
+<br/>
+<br/>
+<div class="col-md-12 text-center">
+  <form method="POST" action="/contact">
+    <label for="name">Name: </label>
+    <input type="text" name="name" placeholder="Mike" />
+    <br>
+    <br>
+    <label for="email">E-mail: </label>
+    <input type="text" name="email" placeholder="mike@email.com" />
+    <br>
+    <br>
+  	<textarea cols="20" rows="10" name="message"></textarea>
+  	<br>
+  	<br>
+  <input type="submit" />
+  </form>
+  <span id="console"><%= @msg %></span>
+</div>
