@@ -9,23 +9,26 @@ body{
   margin-right: 25%;
   padding: 5px;
 }
-#logo{
+
+#logo {
 	width:320px;
 	display: block;
 	margin: auto;
 	padding-top: 5px;
   padding-bottom: 5px;
 }
+
 .bottomIMG {
   width: 250px;
 }
 
-#footerTag{
-  text-align: center;
+#footerTag {
+  width: 100%;
   font-size: 15px;
+  bottom: 0;
 }
 
-.center{
+.center {
 	text-align: center;
 	padding-bottom: 20px;
 }
@@ -33,6 +36,7 @@ ul.nav {
 	display: inline-block;
 	padding-top: 20px;
 }
+
 .shop {
 	width: 275px;
   height: 310px;
@@ -43,6 +47,11 @@ ul.nav {
 .nav-pills > li.active > a {
 	background-color: #FFBDD7;
 }
+
+.nav-pills > li.active > a:hover {
+  background-color: #FF9D97
+}
+
 /* Thumbnail Animations */
 figure{
   width: 400px;
