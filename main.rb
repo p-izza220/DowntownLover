@@ -28,7 +28,7 @@ post '/contact' do
   @title = "Contact XYZ"
   @msg = "Thanks for your submission"
 
-  if /^[^@]+@[^\.]{2,}\.[^\.]{2,}$/ =~ params[:email]
+  if /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ =~ params[:email]
 
   erb :contact
 
@@ -65,8 +65,4 @@ end
   # end email check
 
   erb :contact
-end
-
-def getRouteIndex route
-  $menu.index{ |c| c[:href] == route }
 end
