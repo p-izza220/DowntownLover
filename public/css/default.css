@@ -44,7 +44,7 @@ body {
 
 ul.nav {
 	display: inline-block;
-	padding-top: 17px;
+	padding-top: 20px;
 }
 .shop {
 	width: 275px;
@@ -68,6 +68,7 @@ figure {
   position: relative;
   display: inline-block;
   vertical-align: top;
+  box-shadow: 0 0 15px #848484;
   margin: 0;
 }
 
