@@ -9,4 +9,4 @@
 - Make sure you have a **SendGrid key** (you need to sign up and get the key to make the contact page work)
 - Type **ruby main.rb** to run the server (**localhost:4567**)
 - Go to **http://localhost:4567/**
-- Enjoy
+- Enjoy!
